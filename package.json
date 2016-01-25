@@ -1,0 +1,30 @@
+{
+  "name": "barista-fiddle",
+  "version": "0.0.1",
+  "description": "Express middleware for hoisting Barista Fiddle",
+  "homepage": "https://github.com/baristalabs/barista-fiddle",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baristalabs/barista-fiddle.git"
+  },
+  "main": "app.js",
+  "author": {
+    "name": "oceanswave",
+    "email": "sean.mclellan@baristalabs.com"
+  },
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

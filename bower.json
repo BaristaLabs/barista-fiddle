@@ -1,0 +1,44 @@
+{
+  "name": "barista-coldbrew",
+  "description": "barista-coldbrew",
+  "main": "main.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AngularJS": "angular-latest#~1.4.8",
+    "angular-local-storage": "latest",
+    "bootstrap": "latest",
+    "fontawesome": "latest",
+    "jquery": "latest",
+    "lodash": "~3.10.1",
+    "js-beautify": "https://github.com/beautify-web/js-beautify.git#1.5.4",
+    "ng-focus-on": "latest",
+    "moment": "latest",
+    "angular-ui-router": "latest",
+    "codemirror": "latest",
+    "angular-ui-codemirror": "latest",
+    "angular-bootstrap": "~0.14.3",
+    "angular-resizable": "~1.2.0",
+    "jshint": "~2.9.0",
+    "json-formatter": "~0.4.1",
+    "angular-sanitize": "~1.4.8",
+    "text-encoding": "~0.5.3",
+    "angular-pageslide-directive": "~1.0.8"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
+  }
+}
