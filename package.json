@@ -1,7 +1,7 @@
 {
   "name": "barista-fiddle",
   "version": "0.0.1",
-  "description": "Express middleware for hoisting Barista Fiddle",
+  "description": "GUI to interact with Barista. Includes Express middleware for hoisting files.",
   "homepage": "https://github.com/baristalabs/barista-fiddle",
   "repository": {
     "type": "git",
