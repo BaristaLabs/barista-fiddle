@@ -126,7 +126,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
             
             angular.forEach($scope.model.tabs, function (tab) {
                 //property values that are prefixed with '_' won't be saved.
-                var currentTabState = _.pick(tab, function (value, key) {
+                var currentTabState = _.pickBy(tab, function (value, key) {
                     return key.charAt(0) !== "_";
                 });
                 

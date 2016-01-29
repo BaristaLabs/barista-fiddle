@@ -23,7 +23,7 @@
     "bootstrap": "latest",
     "fontawesome": "latest",
     "jquery": "latest",
-    "lodash": "~3.10.1",
+    "lodash": "~4.0.1",
     "js-beautify": "https://github.com/beautify-web/js-beautify.git#1.5.4",
     "ng-focus-on": "latest",
     "moment": "latest",
@@ -39,6 +39,6 @@
     "angular-pageslide-directive": "~1.0.8"
   },
   "resolutions": {
-    "angular": "1.4.8"
+    "angular": "1.4.9"
   }
 }
