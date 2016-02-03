@@ -49,7 +49,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
                 {
                     title: "Tab 1",
                     size: {
-                        height: 400,
+                        height: $scope.getTabContentHeight(),
                         width: null
                     },
                     active: true,
@@ -81,7 +81,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
             $scope.model.tabs.push({
                 title: "Tab " + (count + 1),
                 size: {
-                    height: 150,
+                    height: $scope.getTabContentHeight(),
                     width: null
                 },
                 code: coldBrewTabDefaults.code,
@@ -185,7 +185,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
 
                     var resultHeaders = response.headers();
                     var correlationId = resultHeaders["x-barista-correlationid"];
-                    if (correlationId)
+                    if (correlationId && $scope.isActiveTabShowingConsole())
                         return $scope.getConsoleMessages(correlationId, activeTab);
                 },
                 function (response) {
@@ -193,7 +193,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
 
                     var resultHeaders = response.headers();
                     var correlationId = resultHeaders["x-barista-correlationid"];
-                    if (correlationId)
+                    if (correlationId && $scope.isActiveTabShowingConsole())
                         return $scope.getConsoleMessages(correlationId, activeTab);
                 })["finally"](function () {
                     activeTab.isEvaluatingScript = false;
