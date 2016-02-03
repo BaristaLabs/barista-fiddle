@@ -5,17 +5,25 @@
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
-            <i>//TODO: Add some settings.</i><br />
-            <label><input type="checkbox" />&nbsp;Enable AWS-based Script Source</label><br/>
-            Allow the user to enable AWS integration, specify a url, AWS region, to connect to and store scripts<br/>
-            (id/key come from env...)
-
-            <br/>
-            Or maybe have a dropdown of script sources (AWS, Azure, SharePoint...) and allow the user to pick and configure...
+            <div class="form-group">
+                <label for="fiddleAppearance" class="col-sm-2 control-label">Appearance</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="fiddleAppearance" data-ng-model="settings.appearance">
+                        <option>Light</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fiddleDAV" class="col-sm-2 control-label">WebDAV Location</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="fiddleDAV" placeholder="Leave blank to be relative to the current location" data-ng-model="settings.webdav">
+                </div>
+            </div>
         </form>
     </div>
     <div class="modal-footer">
         <button class="btn btn-default" data-ng-click="$dismiss()">Cancel</button>
-        <button class="btn btn-primary" data-ng-click="$close()">OK</button>
+        <button class="btn btn-primary" data-ng-click="$close(settings)">OK</button>
     </div>
 </div>
