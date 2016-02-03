@@ -108,7 +108,10 @@
                         </div>
                     </div>
                     <div id="consolePane" class="codeRow" data-ng-style="{ 'height': getActiveTabConsolePaneHeight() + 5 }">
-                        <table class="table table-striped table-bordered table-hover table-condensed">
+                        <div data-ng-if="tab.consoleIsLoading" class="alert alert-warning" role="alert" style="width: 100%">
+                            Loading...
+                        </div>
+                        <table data-ng-if="!tab.consoleIsLoading" class="table table-striped table-bordered table-hover table-condensed">
                             <thead>
                                 <tr>
                                     <td width="155px;">Date</td>

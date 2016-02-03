@@ -58,7 +58,9 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
                     settings: {
                         wordWrap: true
                     },
-                    active: true
+                    active: true,
+                    consoleIsLoading: false,
+                    consoleData: []
                 }
             ];
         };
@@ -86,7 +88,9 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
                 settings: {
                     wordWrap: true
                 },
-                active: true
+                active: true,
+                consoleIsLoading: false,
+                consoleData: []
             });
             
             $scope.saveTabs();
@@ -263,13 +267,15 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
 
             if (!activeTab)
                 activeTab = $scope.getActiveTab();
-
+            
+            activeTab.consoleIsLoading = true;
             return $http({
                 method: "GET",
                 url: coldBrewEndpointUrlPrefix() + "/api/consoleMessages/" + correlationId
             }).then(
                 function (response) {
                     activeTab.consoleData = response.data;
+                    activeTab.consoleIsLoading = false;
                 }
             );
         };
