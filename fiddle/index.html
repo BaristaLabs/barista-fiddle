@@ -84,20 +84,22 @@
                                             <iframe data-ncb-iframe="" data-bf-value="::tab.result" seamless="seamless" data-ng-style="{ 'height': getActiveResultTabContentHeight() }"></iframe>
                                         </div>
                                         <div data-uib-tab="" data-heading="Text" active="isHtmlTextTabActive">
-                                            <div data-ncb-html-text="" html="tab.result.data"></div>
+                                            <div data-ncb-html-text="" html="tab.result.data" data-ng-style="{ 'height': getActiveResultTabContentHeight() }"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="jsonResult" data-ng-switch-when="json" data-focus-on="resultUpdated">
                                     <div class="jsonResultTabs" data-uib-tabset="">
                                         <div data-uib-tab="" data-heading="Preview">
-                                            <json-formatter data-json="tab.result.data" data-open="1"></json-formatter>
+                                            <div data-ng-style="{ 'height': getActiveResultTabContentHeight() }">
+                                                <json-formatter data-json="tab.result.data" data-open="1"></json-formatter>
+                                            </div>
                                         </div>
                                         <div data-uib-tab="" data-heading="Text">
-                                            <div data-ncb-json-text="" json="tab.result.data"></div>
+                                            <div data-ncb-json-text="" json="tab.result.data" data-ng-style="{ 'height': getActiveResultTabContentHeight() }"></div>
                                         </div>
                                         <div data-uib-tab="" data-heading="Raw">
-                                            <div data-ncb-json="" json="tab.result.data"></div>
+                                            <div data-ncb-json="" json="tab.result.data" data-ng-style="{ 'height': getActiveResultTabContentHeight() }"></div>
                                         </div>
                                     </div>
                                 </div>
