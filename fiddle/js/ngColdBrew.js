@@ -151,12 +151,6 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
         
         $scope.loadTabs = function () {
             $scope.model.tabs = localStorageService.get("tabs");
-            angular.forEach($scope.model.tabs, function (tab) {
-                if (tab.result && tab.result.rawData) {
-                    var encoder = new TextEncoder();
-                    tab.result.rawData = encoder.encode(tab.result.rawData);
-                }
-            });
         };
         
         $scope.evaluateScript = function (activeTab, setFocus) {
