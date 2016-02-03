@@ -86,7 +86,6 @@ a {
 
 .htmlResultTabs .tab-content {
     height: 100%;
-    overflow: auto;
     border-radius: 0;
 }
 
@@ -107,7 +106,6 @@ a {
 
 .jsonResultTabs .tab-content {
     height: 100%;
-    overflow: auto;
     border-radius: 0;
 }
 
