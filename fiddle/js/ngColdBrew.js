@@ -163,12 +163,17 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
             
             activeTab.isEvaluatingScript = true;
 
+            var headers = {};
+
+            if (!_.isNaN(_.parseInt(activeTab.settings.executionTimeout)))
+                headers["X-Barista-Execution-Timeout"] = _.parseInt(activeTab.settings.executionTimeout);
+            else
+                headers["X-Barista-Execution-Timeout"] = 5 * 1000; // 5 seconds
+            
             return $http({
                 method: "POST",
                 url: coldBrewEndpointUrlPrefix() + "/api/eval",
-                headers: {
-                    "X-Espresso-Debug": "true"
-                },
+                headers: headers,
                 data: {
                     code: activeTab.code
                 },
