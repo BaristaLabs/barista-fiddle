@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/baristalabs/barista-fiddle.git"
   },
-  "main": "app.js",
+  "main": "./lib/index.js",
   "author": {
     "name": "oceanswave",
     "email": "sean.mclellan@baristalabs.com"

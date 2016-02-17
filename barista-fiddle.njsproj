@@ -12,7 +12,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>aaf0c739-6985-4b6b-9b35-e28272974bd2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -30,7 +31,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
     <Compile Include="fiddle\js\coldBrewService.js" />
     <Compile Include="fiddle\js\htmlTextDirective.js" />
     <Compile Include="fiddle\js\iframeDirective.js" />
@@ -40,6 +40,7 @@
     <Compile Include="fiddle\js\resizeDirective.js" />
     <Compile Include="fiddle\js\tabController.js" />
     <Compile Include="gulpfile.js" />
+    <Compile Include="lib\index.js" />
     <Content Include=".bowerrc" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
@@ -60,6 +61,7 @@
     <Folder Include="fiddle\css\" />
     <Folder Include="fiddle\js\" />
     <Folder Include="fiddle\views\" />
+    <Folder Include="lib\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
