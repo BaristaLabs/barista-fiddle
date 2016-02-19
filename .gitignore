@@ -28,7 +28,9 @@ build/Release
 node_modules
 
 # Bower Dependency Directory
-fiddle/components
+fiddle/components/*
+!fiddle/components/acorn
+!fiddle/components/tern
 
 # =========================
 # Operating System Files

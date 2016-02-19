@@ -22,7 +22,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "run-sequence": "^1.1.5"
   },
   "dependencies": {
     "acorn": "^2.7.0",
