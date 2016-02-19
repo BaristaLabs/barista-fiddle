@@ -19,15 +19,15 @@ ngColdBrew.config(['JSONFormatterConfigProvider', function (JSONFormatterConfigP
         JSONFormatterConfigProvider.hoverPreviewEnabled = true;
     }]);
 
-ngColdBrew.factory("coldBrewEndpointUrlPrefix", ["$window", function ($window) {
+ngColdBrew.factory("baristaEndpointUrlPrefix", ["$window", function ($window) {
     return function() {
         if (angular.isDefined($window.__baristaServerUrl))
             return $window.__baristaServerUrl;
-        return ".";
+        return "..";
     };
     }]);
 
-ngColdBrew.service("coldBrewTabDefaults", function () {
+ngColdBrew.service("fiddleTabDefaults", function () {
     return {
         code: "var helloWorld = function() {\n\
     return (\"Hello, World!\");\n\
@@ -37,8 +37,8 @@ helloWorld();"
     };
 });
 
-ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '$sce', 'localStorageService', 'focus', '$coldBrew', 'coldBrewTabDefaults', 'coldBrewEndpointUrlPrefix',
-    function ($scope, $http, $timeout, $uibModal, $sce, localStorageService, focus, $coldBrew, coldBrewTabDefaults, coldBrewEndpointUrlPrefix) {
+ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '$sce', 'localStorageService', 'focus', '$coldBrew', 'fiddleTabDefaults', 'baristaEndpointUrlPrefix',
+    function ($scope, $http, $timeout, $uibModal, $sce, localStorageService, focus, $coldBrew, fiddleTabDefaults, baristaEndpointUrlPrefix) {
 
         $scope.model = {
             tabs: null
@@ -54,7 +54,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
                     },
                     active: true,
                     result: null,
-                    code: coldBrewTabDefaults.code,
+                    code: fiddleTabDefaults.code,
                     settings: {
                         wordWrap: true
                     },
@@ -84,7 +84,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
                     height: $scope.getTabContentHeight(),
                     width: null
                 },
-                code: coldBrewTabDefaults.code,
+                code: fiddleTabDefaults.code,
                 settings: {
                     wordWrap: true
                 },
@@ -172,7 +172,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
             
             return $http({
                 method: "POST",
-                url: coldBrewEndpointUrlPrefix() + "/api/eval",
+                url: baristaEndpointUrlPrefix() + "/api/eval",
                 headers: headers,
                 data: {
                     code: activeTab.code
@@ -270,7 +270,7 @@ ngColdBrew.controller('MainCtrl', ['$scope', '$http', '$timeout', '$uibModal', '
             activeTab.consoleIsLoading = true;
             return $http({
                 method: "GET",
-                url: coldBrewEndpointUrlPrefix() + "/api/consoleMessages/" + correlationId
+                url: baristaEndpointUrlPrefix() + "/api/consoleMessages/" + correlationId
             }).then(
                 function (response) {
                     activeTab.consoleData = response.data;
