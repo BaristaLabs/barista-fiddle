@@ -1,7 +1,10 @@
 ﻿# barista-fiddle
 
 Provides a GUI to interact with Barista, built in native-web technologies.
+<center>
+![Fiddle Screenshot](https://raw.githubusercontent.com/baristalabs/barista-fiddle/master/fiddlescreenshot.png "Fiddle")
 
+</center>
 
 To use as middleware:
 
