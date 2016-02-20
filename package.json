@@ -1,6 +1,6 @@
 {
   "name": "barista-fiddle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "GUI to interact with Barista. Includes Express middleware for hoisting files.",
   "homepage": "https://github.com/baristalabs/barista-fiddle",
   "repository": {
@@ -8,6 +8,7 @@
     "url": "git://github.com/baristalabs/barista-fiddle.git"
   },
   "main": "./lib/index.js",
+  "files": ["fiddle", "lib"],
   "author": {
     "name": "oceanswave",
     "email": "sean.mclellan@baristalabs.com"
