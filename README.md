@@ -1,6 +1,9 @@
 ﻿# barista-fiddle
 
-Provides a GUI to interact with Barista using native-web technologies.
+"It's like LinqPad for web APIs that you can build in Production!"
+
+Provides a native-web IDE to interact with Barista with autocomplete, fancy output display and more!
+
 <center>
 ![Fiddle Screenshot](https://raw.githubusercontent.com/baristalabs/barista-fiddle/master/fiddlescreenshot.png "Fiddle")
 
